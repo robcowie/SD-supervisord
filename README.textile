@@ -1,0 +1,17 @@
+h1. Monitor Supervisord-managed processes in Server Density
+
+h2. Overview
+
+This plugin submits counts of processes in each status defined by Supervisord. 
+See http://supervisord.org/subprocess.html#process-states for a description 
+of each status.
+Some are more useful than others; Transient states such as `STARTING` are not 
+likely to be reported.
+
+h2. Installation
+
+ * Ensure supervisord is running and it's http server is active
+ * Add a new plugin called `Supervisord` on your account at https://youraccount.serverdensity.com/plugins/
+ * Config your agent to load plugins (see http://www.serverdensity.com/docs/agent/plugins/)
+ * Put Supervisord.py into your plugins directory
+ * Restart your agent
